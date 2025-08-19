@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@theme {
+  --color-primary: #cfb477;
+  --color-secondary: #8d8d8d;
+  --color-accent: #ef0105;
+  --color-dark: #1a1a1a;
+  --color-yellow: #f9d200;
+  --color-black-primary: #191a1d;
+  --color-white-bg: #fefefe;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes bounce-subtle {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+
+}
+
+@keyframes aurora {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-scroll-left { animation: scroll-left 40s linear infinite; }
+  .animate-scroll-right { animation: scroll-right 30s linear infinite; }
+  .animate-scroll-left-fast { animation: scroll-left 20s linear infinite; }
+  .animate-scroll-right-fast { animation: scroll-right 20s linear infinite; }
+  .animate-bounce-subtle { animation: bounce-subtle 2s ease-in-out infinite; }
+  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+  .animate-slide-in-left { animation: slide-in-left 0.8s ease-out forwards; }
+  .animate-slide-in-right { animation: slide-in-right 0.8s ease-out forwards; }
+}
