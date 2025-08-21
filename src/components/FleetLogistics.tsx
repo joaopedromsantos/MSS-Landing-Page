@@ -14,7 +14,7 @@ export function FleetLogistics() {
             Logística e Entrega
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
             Nossa frota própria garante que suas sacarias sejam entregues com segurança 
             e no prazo certo para suas operações de exportação.
           </p>

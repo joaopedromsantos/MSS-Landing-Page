@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio"
 import SackTypes from "./components/SackTypes"
 import Statistics from "./components/Statistics"
 import ValueProposition from "./components/ValueProposition"
+import History from "./components/History"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <SackTypes/>
       <Portfolio/>
       <FleetLogistics/>
+      <History/>
     </div>
   )
 }

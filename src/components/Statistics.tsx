@@ -12,8 +12,8 @@ export function Statistics() {
             Números que Falam por Si
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Duas décadas de excelência na serigrafia de sacas de café, 
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+           Anos de excelência na serigrafia de sacas de café, 
             construindo confiança e qualidade.
           </p>
         </div>

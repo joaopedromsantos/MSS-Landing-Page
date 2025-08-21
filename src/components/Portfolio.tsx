@@ -14,7 +14,7 @@ export function Portfolio() {
             Nosso Portfólio
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Confira alguns dos projetos que foram desenvolvidos em nossa
             empresa.
           </p>
