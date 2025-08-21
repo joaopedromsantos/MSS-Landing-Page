@@ -1,4 +1,4 @@
-import { Star, Leaf, FileText, CheckCircle } from 'lucide-react';
+import { Star, Leaf, FileText } from 'lucide-react';
 
 export const sackData = [
     {
