@@ -1,0 +1,179 @@
+import { Coffee, MessageCircle, Mail, Instagram, MapPin } from 'lucide-react';
+
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const quickLinks = [
+    { label: 'Início', href: '#hero' },
+    { label: 'Serviços', href: '#value-proposition' },
+    { label: 'Tipos de Sacas', href: '#sack-types' },
+    { label: 'Portfólio', href: '#portfolio' },
+    { label: 'Nossa História', href: '#history' },
+    { label: 'Contato', href: '#contact' },
+  ];
+
+  const services = [
+    'Serigrafia em Sacas de Café',
+    'Design e Vectorização',
+    'Impressão Artesanal',
+    'Logística e Entrega',
+    'Consultoria Personalizada',
+    'Atendimento OIC',
+  ];
+
+  return (
+    <footer className="bg-dark text-white">
+      <div className="container mx-auto px-8 sm:px-16 md:px-20 lg:px-24">
+        <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="bg-primary rounded-lg p-2">
+                <Coffee className="h-6 w-6 text-dark" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">Marcelo</span>
+                <span className="text-sm text-primary">Silk Screen</span>
+              </div>
+            </div>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              20 anos especializados em serigrafia artesanal para sacas de café. 
+              Qualidade, tradição e inovação para exportadores de café.
+            </p>
+            
+            <div className="flex space-x-4">
+              <a
+                href="https://wa.me/5535999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
+              <a
+                href="mailto:contato@marcelosilkscreen.com.br"
+                className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/marcelosilkscreen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-bold mb-6 text-primary">Links Rápidos</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-gray-300 hover:text-primary transition-colors duration-300 text-left"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-bold mb-6 text-primary">Nossos Serviços</h4>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li key={index} className="text-gray-300">
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-bold mb-6 text-primary">Contato</h4>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MessageCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300">WhatsApp</p>
+                  <a 
+                    href="https://wa.me/5535999999999"
+                    className="text-white hover:text-primary transition-colors duration-300"
+                  >
+                    (35) 99999-9999
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300">Email</p>
+                  <a 
+                    href="mailto:contato@marcelosilkscreen.com.br"
+                    className="text-white hover:text-primary transition-colors duration-300"
+                  >
+                    contato@marcelosilkscreen.com.br
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300">Localização</p>
+                  <p className="text-white">Sul de Minas Gerais</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-center md:text-left">
+              © {currentYear} Marcelo Silk Screen. Todos os direitos reservados.
+            </p>
+            <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm text-gray-400">
+              <button
+                onClick={() => scrollToSection('#hero')}
+                className="hover:text-primary transition-colors duration-300"
+              >
+                Política de Privacidade
+              </button>
+              <button
+                onClick={() => scrollToSection('#hero')}
+                className="hover:text-primary transition-colors duration-300"
+              >
+                Termos de Uso
+              </button>
+              <button
+                onClick={() => scrollToSection('#contact')}
+                className="hover:text-primary transition-colors duration-300"
+              >
+                Trabalhe Conosco
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="pb-8 text-center">
+          <p className="text-sm text-gray-500 italic">
+            "Transformando sacas de café em obras de arte desde 2004"
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
