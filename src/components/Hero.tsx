@@ -13,10 +13,10 @@ const Hero = () => {
       id="hero"
       className="h-screen flex flex-col justify-center items-center relative overflow-hidden bg-black-primary text-center"
     >
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-4">
+      <div className="relative z-10 container mx-auto px-8 flex flex-col items-center gap-6">
         <div className="animate-fade-in-up animate-[fade-in-up_1s_ease-out]">
-          <div className="inline-flex w-60 lg:w-80 xl:w-96 items-center justify-center">
-            <img src={logo} alt="Logo da Sacca" />
+          <div className="inline-flex w-48 md:w-60 lg:w-80 xl:w-96 items-center justify-center">
+            <img src={logo} alt="Logo" />
           </div>
         </div>
 

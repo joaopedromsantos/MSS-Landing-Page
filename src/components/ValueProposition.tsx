@@ -1,32 +1,15 @@
-import { Coffee, Palette, Shield, Truck } from "lucide-react";
+import { Coffee } from "lucide-react";
+import { propositionData } from "../data/propositionData";
 
-const ValueProposition = () => {
-  const features = [
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Tintas Duráveis e Atóxicas",
-      description:
-        "Utilizamos tintas de alta fixação, atóxicas e duráveis, para garantir a longevidade e a segurança do seu produto.",
-    },
-    {
-      icon: <Palette className="w-8 h-8" />,
-      title: "Criação e Design Profissional",
-      description:
-        "Criamos ou vetorizamos sua arte e desenvolvemos o design completo da sacaria.",
-    },
-    {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Logística de Coleta e Entrega",
-      description:
-        "Coletamos a sacaria, realizamos o serviço e devolvemos ao seu endereço, com total agilidade.",
-    },
-  ];
+export function ValueProposition() {
+
+  const features = propositionData;
 
   return (
     <section id="value-proposition" className="py-20 bg-white-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 md:px-20 lg:px-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-dark mb-6">
             A Arte por Trás do Seu Café
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
@@ -38,22 +21,25 @@ const ValueProposition = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="text-center p-8 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                <div className="text-primary">{feature.icon}</div>
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border border-transparent hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+                  <Icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-dark mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-secondary leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center p-8 rounded-2xl bg-primary/5 border border-primary/20">

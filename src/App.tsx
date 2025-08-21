@@ -1,4 +1,5 @@
 import Clients from "./components/Clients"
+import FleetLogistics from "./components/FleetLogistics"
 import Hero from "./components/Hero"
 import Portfolio from "./components/Portfolio"
 import SackTypes from "./components/SackTypes"
@@ -15,6 +16,7 @@ function App() {
       <Clients/>
       <SackTypes/>
       <Portfolio/>
+      <FleetLogistics/>
     </div>
   )
 }

@@ -5,8 +5,8 @@ export function Clients() {
 
   return (
     <section className="py-20 bg-card overflow-hidden mx-auto">
-      <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+      <div className="text-center mb-16 px-8 sm:px-16 md:px-20 lg:px-24">
+        <h2 className="text-3xl md:text-5xl font-bold text-dark mb-6">
           Nossos Clientes
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>

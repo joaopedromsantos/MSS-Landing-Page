@@ -1,34 +1,36 @@
-import { portfolioData } from '../data/portfolioData';
+import { portfolioData } from "../data/portfolioData";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Portfolio = () => {
+export function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 bg-white max-w-7xl mx-auto px-2">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+    <section id="portfolio" className="py-20 bg-black-primary px-4">
+      <div className="container max-w-7xl mx-auto px-8 sm:px-16 md:px-20 lg:px-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Nosso Portfólio
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Confira alguns dos projetos que desenvolvemos para os maiores players do mercado de café.
+          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Confira alguns dos projetos que foram desenvolvidos em nossa
+            empresa.
           </p>
         </div>
 
         <div className="relative">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={50} 
-            slidesPerView={1} 
-            slidesPerGroup={1} 
+            spaceBetween={50}
+            slidesPerView={1}
+            slidesPerGroup={1}
             loop={true}
             pagination={{ clickable: true }}
             navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
             }}
             breakpoints={{
               768: {
@@ -37,27 +39,19 @@ const Portfolio = () => {
               },
               1024: {
                 slidesPerView: 3,
-                slidesPerGroup: 3, 
+                slidesPerGroup: 3,
               },
             }}
-            className="!pb-12" 
+            className="!pb-12"
           >
             {portfolioData.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="group block overflow-hidden rounded-lg shadow-lg">
                   <div className="relative aspect-[3/4]">
-                        <img
-                            src={item.image}
-                            alt={`Sacaria para ${item.client}`}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {/* A LINHA ABAIXO FOI REMOVIDA!
-                          <div className="absolute inset-0 bg-black bg-opacity-20"></div> 
-                        */}
-                    </div>
-                  <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
-                    <h3 className="text-xl font-bold text-white">{item.client}</h3>
-                    <p className="text-sm text-gray-200">{item.type}</p>
+                    <img
+                      src={item.image}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                 </div>
               </SwiperSlide>
@@ -74,6 +68,6 @@ const Portfolio = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Portfolio;

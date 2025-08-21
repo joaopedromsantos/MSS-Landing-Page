@@ -1,35 +1,14 @@
-import { Calendar, Package, Building2 } from 'lucide-react';
+import { statisticsData } from "../data/statisticsData";
 
-const Statistics = () => {
-  const stats = [
-    {
-      icon: Calendar,
-      number: '19',
-      unit: 'Anos de Experiência',
-      color: 'bg-yellow',
-    },
-    {
-      icon: Package,
-      number: '+3M',
-      unit: 'Sacas Estampadas',
-      color: 'bg-accent',
-    },
-    {
-      icon: Building2,
-      number: '+60',
-      unit: 'Empresas Atendidas',
-      color: 'bg-secondary',
-    },
-  ];
+export function Statistics() {
+  
+  const stats = statisticsData;
 
   return (
-    <section className="py-20 bg-black-primary relative overflow-hidden">
-      <div className="absolute inset-0 bg-coffee-texture"></div>
-      <div className="absolute inset-0 bg-black-primary opacity-90"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-20 bg-black-primary relative overflow-hidden">      
+      <div className="container mx-auto px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Números que Falam por Si
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
@@ -45,15 +24,15 @@ const Statistics = () => {
               key={index}
               className="text-center group hover:transform hover:scale-105 transition-all duration-300"
             >
-              <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${stat.color} mb-6 shadow-lg`}>
-                <stat.icon className="h-10 w-10 text-white" />
+              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${stat.color} mb-6 shadow-lg`}>
+                <stat.icon className="h-8 w-8 text-white" />
               </div>
               
               <div className="mb-4">
-                <div className="text-5xl md:text-6xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+                <div className="text-4xl md:text-6xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
                   {stat.number}
                 </div>
-                <div className="text-2xl font-semibold text-primary">
+                <div className="text-xl font-semibold text-primary">
                   {stat.unit}
                 </div>
               </div>
