@@ -21,9 +21,12 @@ export function ContactForm() {
     setFormStatus({ message: "...", type: "info" });
 
     try {
-      const response = await fetch(`${API_URL}/api/email/send`, {
+      const response = await fetch(`${API_URL}/send-email`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "x-api-key": import.meta.env.VITE_API_KEY,
+        },
         body: JSON.stringify({
           subject: `Contato de ${data.name} - ${
             data.company || "Pessoa Física"
