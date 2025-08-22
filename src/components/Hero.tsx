@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import logo from "../assets/logo.png";
 
-const Hero = () => {
+export function Hero() {
   const scrollToNext = () => {
     document
       .querySelector("#value-proposition")

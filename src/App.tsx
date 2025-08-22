@@ -8,6 +8,7 @@ import ValueProposition from "./components/ValueProposition";
 import History from "./components/History";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <History />
       <Contact />
       <Footer />
+      <Header />
     </div>
   );
 }

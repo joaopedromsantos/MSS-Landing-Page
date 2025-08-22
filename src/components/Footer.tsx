@@ -1,6 +1,6 @@
 import { MessageCircle, Mail, Instagram, MapPin } from "lucide-react";
-import { footerLinks, footerServices } from "../data/footerData";
 import logo from "../assets/logo.png";
+import { linksSite } from "../data/linksData";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,19 +10,26 @@ export function Footer() {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const footerServices = [
+    "Serigrafia em Sacarias de Café",
+    "Design e Vetorização",
+    "Armazenamento de Sacarias",
+    "Logística e Entrega",
+    "Consultoria Personalizada",
+    "Venda de Sacarias de café",
+  ];
+
   return (
     <footer className="bg-dark text-white">
       <div className="container mx-auto px-8 sm:px-16 md:px-20 lg:px-24">
         <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-
               <img
-                  src={logo}
-                  alt="logomarca de marcelo silk screen"
-                  className="object-contain h-12"
-                />
-            
+                src={logo}
+                alt="logomarca de marcelo silk screen"
+                className="object-contain h-12"
+              />
             </div>
 
             <div className="flex space-x-4">
@@ -56,7 +63,7 @@ export function Footer() {
               Links Rápidos
             </h4>
             <ul className="space-y-3">
-              {footerLinks.map((link, index) => (
+              {linksSite.map((link, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}

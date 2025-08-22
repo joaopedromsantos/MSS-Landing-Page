@@ -1,31 +1,10 @@
-import { Mail, Instagram, MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { ContactForm } from "./ContactForm";
+import { contactData } from "../../data/contactData";
 
 export function Contact() {
 
-  const contactInfo = [
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      info: "(35) 99932-2602",
-      action: "https://wa.me/5535999322602",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      info: "marcelo@marcelosilkscreen.com.br",
-      action: "mailto:marcelo@marcelosilkscreen.com.br",
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      icon: Instagram,
-      title: "Instagram",
-      info: "@marcelosilk",
-      action: "https://instagram.com/marcelosilk",
-      color: "from-pink-500 to-purple-600",
-    },
-  ];
+  
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -44,7 +23,7 @@ export function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div className="grid grid-cols-1 gap-4">
-              {contactInfo.map((contact, index) => (
+              {contactData.map((contact, index) => (
                 <a
                   key={index}
                   href={contact.action}
