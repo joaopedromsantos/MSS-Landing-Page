@@ -7,7 +7,7 @@ export function FleetLogistics() {
   const features = fleetData
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="logistic" className="py-20 bg-gray-50">
       <div className="container mx-auto max-w-7xl px-8 sm:px-16 md:px-20 lg:px-24">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">

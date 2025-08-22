@@ -4,7 +4,7 @@ export function Clients() {
   const clients = clientsData;
 
   return (
-    <section className="py-20 bg-white overflow-hidden mx-auto">
+    <section id="clients" className="py-20 bg-white overflow-hidden mx-auto">
       <div className="text-center mb-16 px-8 sm:px-16 md:px-20 lg:px-24">
         <h2 className="text-3xl md:text-5xl font-bold text-dark mb-6">
           Nossos Clientes

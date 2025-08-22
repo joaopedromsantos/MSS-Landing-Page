@@ -7,6 +7,7 @@ import Statistics from "./components/Statistics";
 import ValueProposition from "./components/ValueProposition";
 import History from "./components/History";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <FleetLogistics />
       <History />
       <Contact />
+      <Footer />
     </div>
   );
 }
