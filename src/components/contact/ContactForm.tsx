@@ -4,6 +4,8 @@ import { contactFormSchema, type ContactFormData } from "../../lib/schema";
 import { Send } from "lucide-react";
 import { useState } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export function ContactForm() {
   const [formStatus, setFormStatus] = useState({ message: "", type: "" });
 
@@ -19,12 +21,26 @@ export function ContactForm() {
     setFormStatus({ message: "...", type: "info" });
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(`${API_URL}/send-email`, {
         method: "POST",
         headers: { 
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "x-api-key": import.meta.env.VITE_API_KEY,
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+          subject: `Contato de ${data.name} - ${
+            data.company || "Pessoa Física"
+          }`,
+          body: `
+            Nome: ${data.name}\n
+            Email: ${data.email}\n
+            Telefone: ${data.phone}\n
+            Empresa: ${data.company || "Não informado"}\n
+            ---
+            Mensagem:\n
+            ${data.message}
+          `,
+        }),
       });
 
       if (!response.ok) {
