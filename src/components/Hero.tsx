@@ -11,11 +11,11 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen flex flex-col justify-center items-center relative overflow-hidden bg-black-primary text-center"
+      className="h-dvh flex flex-col justify-center items-center relative overflow-hidden bg-black-primary text-center"
     >
       <div className="relative z-10 container mx-auto px-8 flex flex-col items-center gap-6">
         <div className="animate-fade-in-up animate-[fade-in-up_1s_ease-out]">
-          <div className="inline-flex w-48 md:w-60 lg:w-80 xl:w-96 items-center justify-center">
+          <div className="inline-flex w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72 items-center justify-center">
             <img src={logo} alt="Logo" />
           </div>
         </div>
@@ -24,7 +24,7 @@ export function Hero() {
           className="max-w-4xl mx-auto animate-fade-in-up mb-6"
           style={{ animationDelay: "0.2s" }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-6 leading-tight">
             Transforme Suas
             <span
               className="block text-transparent bg-clip-text bg-gradient-to-r from-white-bg via-primary to-yellow bg-[size:200%_auto] animate-[aurora_3s_linear_infinite_alternate]
@@ -34,9 +34,8 @@ export function Hero() {
             </span>
             em Obras de Arte
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            A primeira impressão de um café especial começa na sacaria. Elevamos
-            o padrão da sua marca com uma serigrafia de alta qualidade.
+          <p className="text-md sm:text-lg md:text-xl  text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            A primeira impressão de um café especial começa na sacaria. 
           </p>
         </div>
 
