@@ -1,4 +1,3 @@
-// Arquivo: /api/send-email.ts
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 interface FormData {
@@ -21,8 +20,8 @@ export default async function handler(
 
   try {
     const formData: FormData = request.body;
-    const apiKey = process.env.VITE_API_KEY as string;
-    const apiUrl = process.env.VITE_API_URL as string;
+    const apiKey = process.env.API_KEY as string;
+    const apiUrl = process.env.API_URL as string;
 
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
