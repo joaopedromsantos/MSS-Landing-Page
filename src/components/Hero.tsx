@@ -46,7 +46,7 @@ export function Hero() {
                 .querySelector("#contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-accent cursor-pointer text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-accent cursor-pointer text-white px-8 py-4 rounded-full text-sm sm:text-lg font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <span>Solicite um Orçamento</span>
           </button>
